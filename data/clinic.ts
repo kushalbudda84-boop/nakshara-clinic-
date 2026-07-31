@@ -8,6 +8,12 @@
  * updates automatically — no component code needs to change.
  */
 
+// Production URL — set NEXT_PUBLIC_SITE_URL in Vercel project settings once
+// the site has a real domain (or use the assigned *.vercel.app URL). Falls
+// back to a placeholder so metadata/sitemap/robots never break the build.
+export const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL || "https://www.nakkshatraclinic.example";
+
 export type GalleryImage = {
   /** Path under /public once a real photo is added, e.g. "/images/clinic/entrance.jpg" */
   src: string;

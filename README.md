@@ -63,6 +63,8 @@ structural rewrite.
 - `MedicalClinic` JSON-LD: [components/StructuredData.tsx](components/StructuredData.tsx)
   — fields are only emitted once the corresponding value in `data/clinic.ts`
   is filled in.
-- `app/sitemap.ts` and `app/robots.ts` use a placeholder domain
-  (`nakkshatraclinic.example`) — replace with the real production domain
-  once known.
+- `metadataBase`, `app/sitemap.ts` and `app/robots.ts` all read from
+  `siteUrl` in [data/clinic.ts](data/clinic.ts), which falls back to a
+  placeholder domain. Set the `NEXT_PUBLIC_SITE_URL` environment variable
+  (e.g. in Vercel project settings) to the real production URL — no code
+  changes needed.

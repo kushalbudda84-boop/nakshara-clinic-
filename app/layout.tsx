@@ -3,6 +3,7 @@ import { Manrope, Inter } from "next/font/google";
 import "./globals.css";
 import StructuredData from "@/components/StructuredData";
 import MobileActionBar from "@/components/MobileActionBar";
+import { siteUrl } from "@/data/clinic";
 
 const heading = Manrope({
   subsets: ["latin"],
@@ -19,7 +20,7 @@ const body = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.nakkshatraclinic.example"),
+  metadataBase: new URL(siteUrl),
   title: "Nakkshatra Clinic | Family Healthcare & Diagnostic Services",
   description:
     "Nakkshatra Clinic provides general medical care, women's health, paediatric consultations and convenient diagnostic services for individuals and families.",
